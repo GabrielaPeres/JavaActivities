@@ -1,13 +1,22 @@
-
 package aula09;
 
 public class Livro implements Publicacao {
-  private String titulo;
-  private String autor;
-  private int totPaginas;
-  private int pagAtual;
-  private boolean aberto;
-  private Pessoa leitor;  
+
+    private String titulo;
+    private String autor;
+    private int totPaginas;
+    private int pagAtual;
+    private boolean aberto;
+    private Pessoa leitor;
+
+    public Livro(String titulo, String autor, int totPaginas, int pagAtual, boolean aberto, Pessoa leitor) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.totPaginas = totPaginas;
+        this.pagAtual = 0;
+        this.aberto = false;
+        this.leitor = leitor;
+    }
 
     public String getTitulo() {
         return titulo;
@@ -21,7 +30,7 @@ public class Livro implements Publicacao {
         return totPaginas;
     }
 
-    public boolean isAberto() {
+    public boolean getAberto() {
         return aberto;
     }
 
@@ -48,15 +57,18 @@ public class Livro implements Publicacao {
     public void setLeitor(Pessoa leitor) {
         this.leitor = leitor;
     }
-   public void detalhes(){
-       System.out.println("");
-       System.out.println("");
-       System.out.println("");
-   }
+
+    public void detalhes() {
+        System.out.println("---------------------------------");
+        System.out.println("Título do livro:" + this.getTitulo());
+        System.out.println("Autor do livro:" + this.getAutor());
+        System.out.println("O número de páginas do livro:" + this.getTotPaginas());
+        System.out.println("Esse livro pertence a :" + leitor.getNome());
+    }
 
     @Override
     public void abrir() {
-       this.setAberto(true);
+        this.setAberto(true);
         System.out.println("Livro fechado");
     }
 
@@ -67,29 +79,31 @@ public class Livro implements Publicacao {
     }
 
     @Override
-    public void folhear() {
-       if (this.aberto){
-           System.out.println("Foleando");
-       }else
-            System.out.println("Não pode folhear pois o livro está fechado");
+    public void folhear(int p) {
+        if (p > this.totPaginas) {
+            this.setTotPaginas(0);
+        } else {
+            this.setTotPaginas(p);
+        }
     }
 
     @Override
     public void avancarPag() {
-        if(this.aberto){
-           this.pagAtual++;
-        }else
+        if (this.aberto) {
+            this.pagAtual++;
+        } else {
             System.out.println("Não pode avançar página");
-        
+        }
+
     }
 
     @Override
     public void voltarPag() {
-       if(this.aberto){
-           this.pagAtual--;
-        }else
+        if (this.aberto) {
+            this.pagAtual--;
+        } else {
             System.out.println("Não pode voltar a página");
+        }
     }
-  
-  
+
 }
