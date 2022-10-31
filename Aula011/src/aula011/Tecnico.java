@@ -1,6 +1,6 @@
 package aula011;
 
 
-public class Tecnico {
+public class Tecnico extends Aluno{
     
 }
