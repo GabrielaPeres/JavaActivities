@@ -8,6 +8,10 @@ public class Aula12 {
         Peixe p1 = new Peixe();
         Ave a1 = new Ave();
 
+        Canguru c1 = new Canguru();
+        Cachorro au1 = new Cachorro();
+        
+       
         System.out.println("-------------------------");
         m1.alimentar();
         m1.locomover();
@@ -27,6 +31,17 @@ public class Aula12 {
         a1.emitirSom();
         a1.fazerNinho();
 
+        
+        
+        
+        System.out.println("-----------------------------");
+        c1.locomover();
+        c1.usarBolsa();
+        c1.alimentar();
+        System.out.println("-----------------------------");
+        au1.abanarRabo();
+        au1.enterrarOsso();
+       
     }
 
 }

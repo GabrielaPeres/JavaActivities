@@ -30,9 +30,9 @@ public abstract class Animal {
         this.membros = membros;
     }
 
-    abstract void locomover();
+    public abstract void locomover();
 
-    abstract void alimentar();
+    public abstract void alimentar();
 
-    abstract void emitirSom();
+    public abstract void emitirSom();
 }

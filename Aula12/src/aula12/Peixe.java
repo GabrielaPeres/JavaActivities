@@ -1,6 +1,7 @@
 package aula12;
 
 public class Peixe extends Animal {
+
     private String corEscama;
 
     public String getCorEscama() {
@@ -16,17 +17,17 @@ public class Peixe extends Animal {
     }
 
     @Override
-    void locomover() {
+    public void locomover() {
         System.out.println("Nadando");
     }
 
     @Override
-    void alimentar() {
+    public void alimentar() {
         System.out.println("Comendo alga");
     }
 
     @Override
-    void emitirSom() {
+    public void emitirSom() {
         System.out.println("Blue Blue");
     }
 }
