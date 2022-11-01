@@ -1,12 +1,12 @@
 package aula13;
 
 public class Aula13 {
-
+    
     public static void main(String[] args) {
         Mamifero m1 = new Mamifero();
         Lobo l1 = new Lobo();
         Cachorro c1 = new Cachorro();
-
+        
         m1.emitirSom();
         m1.setCorPelo("preto");
         m1.setIdade(10);
@@ -24,7 +24,7 @@ public class Aula13 {
         c1.setIdade(12);
         c1.setMembros(4);
         c1.setPeso(10f);
-
+        c1.reagir(true);
     }
-
+    
 }
