@@ -50,4 +50,10 @@ public abstract class Pessoa {
     public void ganharExp() {
     this.experiencia = true;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + ", experiencia=" + experiencia + '}';
+    }
+    
 }

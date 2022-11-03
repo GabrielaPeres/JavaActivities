@@ -3,14 +3,14 @@ package projetofinal;
 public class Video implements AcoesVideo {
 
     private String titulo;
-    private int avalicao;
+    private int avaliacao;
     private int views;
     private int curtidas;
     private boolean reproduzindo;
 
-    public Video(String titulo, int avalicao, int views, int curtidas, boolean reproduzindo) {
+    public Video(String titulo, int avaliacao, int views, int curtidas, boolean reproduzindo) {
         this.titulo = titulo;
-        this.avalicao = 1;
+        this.avaliacao = 1;
         this.views = 0;
         this.curtidas = 0;
         this.reproduzindo = false;
@@ -21,7 +21,7 @@ public class Video implements AcoesVideo {
     }
 
     public int getAvalicao() {
-        return avalicao;
+        return avaliacao;
     }
 
     public int getViews() {
@@ -40,8 +40,10 @@ public class Video implements AcoesVideo {
         this.titulo = titulo;
     }
 
-    public void setAvalicao(int avalicao) {
-        this.avalicao = avalicao;
+    public void setAvaliacao(int avaliacao) {
+        int nova;
+        nova = (this.avaliacao + avaliacao)/this.views;
+        this.avaliacao = nova;
     }
 
     public void setViews(int views) {
@@ -70,4 +72,10 @@ public class Video implements AcoesVideo {
     public void like() {
     this.curtidas ++;
     }
+
+    @Override
+    public String toString() {
+        return "Video{" + "titulo=" + titulo + ", avaliacao=" + avaliacao + ", views=" + views + ", curtidas=" + curtidas + ", reproduzindo=" + reproduzindo + '}';
+    }
+    
 }

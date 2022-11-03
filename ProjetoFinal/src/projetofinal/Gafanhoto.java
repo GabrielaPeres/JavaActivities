@@ -31,4 +31,11 @@ public class Gafanhoto extends Pessoa {
     public void viuMaisUm() {
     this.toAssistido ++;
     }
+
+    @Override
+    public String toString() {
+        return "Gafanhoto{" + "login=" + login + ", toAssistido=" + toAssistido + '}';
+    }
+
 }
+
